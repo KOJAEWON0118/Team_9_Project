@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace APPLE_GAME
+namespace UI
 {
-    public partial class Form1 : Form
+    public partial class Log_IN : Form
     {
-        public Form1()
+        public Log_IN()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //test last
         }
     }
 }
