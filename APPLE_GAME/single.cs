@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace APPLE_GAME
 {
-    public partial class Form1 : Form
+    public partial class single : Form
     {
-        public Form1()
+        public single()
         {
             InitializeComponent();
         }
