@@ -54,6 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="drag.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="single.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,14 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +99,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\apple_cut.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple_yello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple_black.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cutpple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

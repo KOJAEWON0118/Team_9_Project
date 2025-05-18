@@ -14,7 +14,7 @@ namespace APPLE_GAME
     {
         int remainingTime = 120; //게임 시간 
         int score = 0; // 테스트용 score
-        DragHelper drag = new DragHelper(); 
+       
 
         public single()
         {
@@ -29,6 +29,8 @@ namespace APPLE_GAME
             // 타이머 설정
             timer1.Interval = 1000; // 1초마다          
             timer1.Start();
+
+         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -48,9 +50,17 @@ namespace APPLE_GAME
             }
         }
 
+        /*
+         drag event 관련 시작
+        */
+
+        DragHelper drag = new DragHelper();
         private void panel_game_MouseDown(object sender, MouseEventArgs e)
         {
-            drag.Begin(e.Location);
+            Point screenPoint = Control.MousePosition;
+            Point panelPoint = panel_game.PointToClient(screenPoint);
+
+            drag.Begin(panelPoint);
             panel_game.Invalidate();
         }
 
@@ -58,7 +68,10 @@ namespace APPLE_GAME
         {
             if (drag.IsDragging)
             {
-                drag.Update(e.Location);
+                Point screenPoint = Control.MousePosition;
+                Point panelPoint = panel_game.PointToClient(screenPoint);
+
+                drag.Update(panelPoint);
                 panel_game.Invalidate();
             }
         }
@@ -73,13 +86,16 @@ namespace APPLE_GAME
         {
             if (drag.IsDragging)
             {
-                using (Pen pen = new Pen(Color.Orange, 2))
+                using (Pen pen = new Pen(Color.Blue, 1))
                 {
                     e.Graphics.DrawRectangle(pen, drag.GetRect());
                 }
             }
         }
 
+        /*
+          drag event 관련 끝
+        */
 
 
     }
