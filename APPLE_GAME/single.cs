@@ -30,7 +30,9 @@ namespace APPLE_GAME
             timer1.Interval = 1000; // 1초마다          
             timer1.Start();
 
-         
+            List<AppleData> allApples = AppleGenerator.GenerateApples(panel_game);
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

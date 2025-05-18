@@ -36,9 +36,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_game = new Guna.UI2.WinForms.Guna2Panel();
             this.txt_test = new System.Windows.Forms.TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.apple1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel_overlay = new Guna.UI2.WinForms.Guna2Panel();
             this.panel_game.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apple1)).BeginInit();
             this.SuspendLayout();
             // 
             // prg_time
@@ -85,8 +86,8 @@
             // 
             this.panel_game.BorderColor = System.Drawing.Color.LawnGreen;
             this.panel_game.BorderThickness = 3;
-            this.panel_game.Controls.Add(this.guna2PictureBox1);
-            this.panel_game.Location = new System.Drawing.Point(163, 102);
+            this.panel_game.Controls.Add(this.panel_overlay);
+            this.panel_game.Location = new System.Drawing.Point(160, 100);
             this.panel_game.Name = "panel_game";
             this.panel_game.Size = new System.Drawing.Size(900, 500);
             this.panel_game.TabIndex = 6;
@@ -103,22 +104,42 @@
             this.txt_test.Size = new System.Drawing.Size(64, 30);
             this.txt_test.TabIndex = 7;
             // 
-            // guna2PictureBox1
+            // apple1
             // 
-            this.guna2PictureBox1.Image = global::APPLE_GAME.Properties.Resources.b8;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(151, 98);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(134, 127);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.apple1.BackColor = System.Drawing.Color.Transparent;
+            this.apple1.Image = global::APPLE_GAME.Properties.Resources.b4;
+            this.apple1.ImageRotate = 0F;
+            this.apple1.Location = new System.Drawing.Point(12, 122);
+            this.apple1.Name = "apple1";
+            this.apple1.Size = new System.Drawing.Size(137, 137);
+            this.apple1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.apple1.TabIndex = 0;
+            this.apple1.TabStop = false;
+            this.apple1.UseTransparentBackground = true;
+            this.apple1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseDown);
+            this.apple1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseMove);
+            this.apple1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseUp);
+            // 
+            // panel_overlay
+            // 
+            this.panel_overlay.BackColor = System.Drawing.Color.Transparent;
+            this.panel_overlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_overlay.Location = new System.Drawing.Point(0, 0);
+            this.panel_overlay.Name = "panel_overlay";
+            this.panel_overlay.Size = new System.Drawing.Size(900, 500);
+            this.panel_overlay.TabIndex = 3;
+            this.panel_overlay.UseTransparentBackground = true;
+            this.panel_overlay.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_game_Paint);
+            this.panel_overlay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseDown);
+            this.panel_overlay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseMove);
+            this.panel_overlay.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_game_MouseUp);
             // 
             // single
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.apple1);
             this.Controls.Add(this.txt_test);
             this.Controls.Add(this.btn_test);
             this.Controls.Add(this.txt_score);
@@ -129,7 +150,7 @@
             this.Text = "apple_game";
             this.Load += new System.EventHandler(this.single_Load);
             this.panel_game.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apple1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +164,8 @@
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Panel panel_game;
         private System.Windows.Forms.TextBox txt_test;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox apple1;
+        private Guna.UI2.WinForms.Guna2Panel panel_overlay;
     }
 }
 
